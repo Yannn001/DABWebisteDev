@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DAB website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+</head>
+<!-- https://user-images.githubusercontent.com/69735000/208339849-f5f07bf6-b743-4d54-953b-fc5cbec387be.png -->
+
+<body>
+  <style>
+    /* Body font */
+    .body {
+      font-family: 'Roboto Slab', sans-serif;
+    }
+
+    /* White box in the top nav bar*/
+    .whiteBox {
+      background-color: white;
+      width: 30px;
+      margin: 0;
+      color: black;
+      display: inline-block;
+      text-align: center;
+      font-family: 'Roboto Slab', sans-serif;
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    /* Black box in the top nav bar*/
+    .blackBox {
+      background-color: black;
+      width: 30px;
+      margin: 0px;
+      color: white;
+      display: inline-block;
+      text-align: center;
+      font-family: 'Roboto Slab', sans-serif;
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    /*Container for the second nav bar*/
+    .secNavcontainer {
+      padding-top: 20px;
+      position: relative;
+    }
+
+    /* Blue button container in the second nav bar*/
+    .blueBtnContainer {
+      position: absolute;
+      background-color: #3b6afd;
+      right: 0;
+      color: white;
+      padding: 10px 20px 0px;
+      margin-right: 50px;
+      border-radius: 25px;
+      height: 50px;
+    }
+
+    .blueBtnContainer:hover {
+      background-color: white;
+      color: black;
+    }
+
+    /* Black button container in the second nav bar*/
+    .blackBtnContainer {
+      position: absolute;
+      right: 0;
+      background-color: #00060f;
+      margin-right: 200px;
+      color: white;
+      padding: 10px;
+      border-radius: 25px;
+      text-align: center;
+      height: 50px;
+    }
+
+    /* Containers in the blackBtnContainer*/
+    .serviceContainer {
+      display: inline-block;
+      padding-left: 10px;
+    }
+
+    .serviceContainer:hover {
+      color: #3b6afd;
+    }
+
+    .aboutContainer {
+      display: inline-block;
+      padding-left: 30px;
+    }
+
+    .aboutContainer:hover {
+      color: #3b6afd;
+    }
+
+    .contactContainer {
+      display: inline-block;
+      padding-left: 30px;
+      padding-right: 10px;
+    }
+
+    .contactContainer:hover {
+      color: #3b6afd;
+    }
+
+    /* Logo container in the second nav bar*/
+    .logoContainer {
+      position: absolute;
+      left: 0;
+      margin-left: 50px;
+    }
+
+    .logoContainerLrg {
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: block
+    }
+
+    .logoContainerSml {
+      font-size: 0.9rem;
+      font-weight: bold;
+      display: block
+    }
+
+    .line {
+      border-top: 1px solid #BDBDBD;
+    }
+
+    .homeContainer {
+      position: relative;
+      height: 1000px;
+      background-image: url('https://user-images.githubusercontent.com/69735000/208714819-432300ff-37e6-49a9-a61a-96d86583f2ba.png');
+      background-size: cover;
+    }
+
+    .sloganContainer {
+      margin-top: 180px;
+      margin-left: 50px;
+      position: absolute;
+    }
+
+    .bigSlogan {
+
+      font-size: 5rem;
+      /* font-style: italic; */
+      padding-bottom: 0%;
+
+    }
+
+    .smallSlogan {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .demoBtn {
+      /* margin-top: 600px;
+      margin-left: 50px;
+      position: absolute; */
+      background-color: #3b6afd;
+      color: white;
+      padding: 10px;
+      border-radius: 25px;
+      text-align: center;
+      padding-top: 15px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      padding-left: 20px;
+      transform: scale(1);
+      transition: transform 0.5s;
+    }
+
+    .demoBtn:hover {
+      background-color: white;
+      color: black;
+      transform: scale(1.2);
+      font-weight: bold;
+    }
+
+    .infoContainer {
+      margin-top: 780px;
+      margin-left: 72px;
+      height: 100px;
+      /* position: absolute; */
+      background-color: #242834;
+      color: white;
+      width: 90%;
+      /* left:5%; */
+      /* text-align: center; */
+    }
+
+    .infoOneContainer {
+      padding-top: 10px;
+    }
+
+    .infoTwoContainer {
+      padding-top: 10px;
+    }
+
+    .infoThreeContainer {
+      padding-top: 10px;
+    }
+
+    .infoFourContainer {
+      padding-top: 10px;
+    }
+
+    .barContainer {
+      position: absolute;
+      border-radius: 25px;
+      display: inline-block;
+      margin-top: 10px;
+      margin-left: 12px;
+      /* top:1px; */
+      margin-bottom: 0px;
+      width: 5px;
+      height: 80px;
+      background-color: #3b6afd;
+    }
+
+    .secondPageContainer {
+      height: 820px;
+      width: 100%;
+      position: relative;
+      background-color: #3b3f47;
+    }
+
+    .smlLogoContainer {
+      position: absolute;
+      background-color: #dcdfe3;
+      left: 50px;
+      color: Black;
+      padding: 10px 50px 10px;
+      border-radius: 0px 0px 25px 25px;
+      height: 50px;
+      font-family: 'Roboto Slab', sans-serif;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    .formContainer {
+      position: relative;
+      top: 120px;
+      border-radius: 200px 0px 0px 200px;
+      height: 600px;
+      background-color: #dcdfe3;
+      color: #00060f;
+      font-family: 'Roboto Slab', sans-serif;
+      /* padding-top: 50px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      padding-left: 20px; */
+    }
+
+    .stageContainer {
+      background-color: #3b3f47;
+      color: #dcdfe3;
+      padding-top: 10px;
+      padding-right: 0px;
+      padding-bottom: 10px;
+      padding-left: 100px;
+      border-radius: 25px 25px 25px 25px;
+      height: 50px;
+      font-family: 'Roboto Slab', sans-serif;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  </style>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid justify-content-center">
+      <div class="row">
+        <div class="col-md-auto">
+          <div class="blackBox">o</div>
+          <div class="whiteBox">p</div>
+          <div class="blackBox">e</div>
+          <div class="whiteBox">n</div>
+          <div class="blackBox">P</div>
+          <div class="whiteBox">A</div>
+          <div class="blackBox">S</div>
+          <div class="whiteBox">S</div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="line"></div>
+  <div class="homeContainer">
+    <div class="secNavcontainer">
+      <div class="row justify-content-center">
+        <div class="col-md-auto logoContainer">
+          <div class="logoContainerLrg">openPASS</div>
+          <div class="logoContainerSml">Future of crop scouting and farming</div>
+        </div>
+        <div class="col-md-auto blackBtnContainer">
+          <div class="serviceContainer">Service</div>
+          <div class="aboutContainer">About</div>
+          <div class="contactContainer">Contact</div>
+        </div>
+        <div class="col-md-auto blueBtnContainer">
+          View demo
+        </div>
+      </div>
+    </div>
+
+    <div class="sloganContainer">
+      <div class="bigSlogan">Democratizing access</div>
+      <div class="bigSlogan">to unmanned</div>
+      <div class="bigSlogan">areial system</div>
+      <div class="smallSlogan">For crop scouting and farming</div>
+    </div>
+
+    <div class="demoBtn" style="      
+    margin-top: 600px;
+    margin-left: 50px;
+    position: absolute;">
+      View demo
+    </div>
+
+    <div class="container infoContainer">
+      <div class="row row-cols-4">
+        <div class="col-3">
+          <div class="row">
+            <div class="col-1">
+              <div class="barContainer"></div>
+            </div>
+            <div class="col-11 infoOneContainer">
+              Info one goes here
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="row">
+            <div class="col-1">
+              <div class="barContainer"></div>
+            </div>
+            <div class="col-11 infoTwoContainer">
+              Info two goes here
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="row">
+            <div class="col-1">
+              <div class="barContainer"></div>
+            </div>
+            <div class="col-11 infoThreeContainer">
+              Info three goes here
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="row">
+            <div class="col-1">
+              <div class="barContainer"></div>
+            </div>
+            <div class="col-11 infoFourContainer">
+              Info four goes here
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="secondPageContainer">
+    <div class="smlLogoContainer">
+      openPASS
+    </div>
+    <div class="row row-cols-auto">
+      <div class="col-4"> </div>
+      <div class="col-8">
+        <div class="formContainer">
+          <div class="row row-cols-auto" style="padding-top: 25px; padding-left: 130px;">
+            <div class="col-4">
+              <div id="stageOne" class="stageContainer" style="opacity: 1;">Stage1</div>
+            </div>
+            <div id="stageTwo" class="col-4" style="opacity: 0.5;">
+              <div class="stageContainer">Stage2</div>
+            </div>
+            <div id="stageThree" class="col-4" style="opacity: 0.5;">
+              <div class="stageContainer">Stage3</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-center" style="      
+            font-family: 'Roboto Slab', sans-serif;
+            font-size: 2.3rem;
+            padding-left: 120px;
+            padding-top: 20px;
+            font-weight: bold;">
+              Request New Scouting Job</div>
+          </div>
+          <form id="demoForm" class="row g-3 needs-validation was-validated"
+            style="padding-top: 25px; padding-right: 40px;padding-left: 130px;">
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="inputAerialScoutingId" placeholder="Aerial Scouting Unit ID"
+                required="" autocomplete="off" name="aerialScoutingId">
+              <div class="valid-feedback">
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="inputResourceKeys" placeholder="Compute Resource Keys"
+                required="" autocomplete="off" name="resourceKeys">
+              <div class="valid-feedback">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="inputGPSCoordinates" placeholder="Flight Area GPS Coordinates"
+                required="" autocomplete="off" name="gpsCoordinates">
+              <div class="valid-feedback">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="inputMaximumAltitude" placeholder="Maximum Altitude"
+                required="" autocomplete="off" name="maximumAltitude">
+              <div class="valid-feedback">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="inputObserverID" placeholder="Flight Observer ID" required="" 
+              autocomplete="off" name="observerID">
+              <div class="valid-feedback">
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="inputOrganizationID" placeholder="Organization ID"
+                required="" autocomplete="off" name="organizationID">
+              <div class="valid-feedback">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="inputAdditionalInfo"
+                placeholder="Additional Information(opt)" autocomplete="off" name="additionalInfo">
+              <div class="valid-feedback">
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="checkFAACheck" required="" autocomplete="off" name="faaCheck" unchecked>
+                <label class="form-check-label" for="FAACheck">
+                  I certify this mission follows all FAA regulations.
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="checkAcknowledgeCheck" required="" autocomplete="off" name="acknowledgeCheck" unchecked>
+                <label class="form-check-label" for="acknowledgeCheck">
+                  I certify that I have permission of the land owner and relevant parties to conduct this mission.
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <button id="toStepTwoButton" type="button" class="btn btn-primary" style="      
+              padding: 10px 20px 10px;
+              border-radius: 25px;
+              background-color: #3b6afd;">
+                Next
+              </button>
+            </div>
+
+            <!-- FORM TWO -->
+            <!-- <div id="missonType" class="input-group col-md-6">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Mission Type</label>
+              </div>
+              <select class="custom-select" id="inputGroupSelect01">
+                <option selected>Please pick one of the following mission type</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <div class="col-md-12">
+              <input type="text" class="form-control" id="heatMapMetric" placeholder="Metric of the Heat Map"
+                required="" autocomplete="off" name="heatMapMetric">
+              <div class="valid-feedback">
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <input type="text" class="form-control" id="missionDuration" placeholder="Duration for this mission"
+                required="" autocomplete="off" name="missionDuration">
+              <div class="valid-feedback">
+              </div>
+            </div>
+            
+            <div class="col-12">
+              <button id="toStepThreeButton" type="button" class="btn btn-primary" style="      
+              padding: 10px 20px 10px;
+              border-radius: 25px;
+              background-color: #3b6afd;">
+                Next
+              </button>
+            </div> -->
+          </form>
+        </div>
+      </div>
+
+    </div>
+    <div class="demoBtn" style="      
+    margin-top: 50px;
+    margin-left: 50px;
+    position: absolute;">
+      Get report
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
+  <script src="main.js">
+  </script>
+</body>
+
+</html>
