@@ -45,10 +45,34 @@ class FormExtractor {
     }
 
 }
+const slogan = document.getElementById('slogan');
+const sloganNInfo = document.getElementById('sloganNInfo');
+const pic = document.getElementById('pic');
+const p = pic.parentNode;
+const picCopy = document.getElementById('pic');
+const infoBoxes = document.getElementById('infoBoxes');
+const picContent = pic.innerHTML;
+const sloganContent = slogan.innerHTML;
+const sloganNInfoContent = sloganNInfo.innerHTML;
+if (window.innerWidth < 450) {
+    // p.removeChild(pic);
+    //  p.insertBefore(picCopy, sloganNInfo);
+    // //p.insertBefore(sloganNInfo, picCopy);
+    // // pic.innerHTML = sloganContent;
+    // // slogan.innerHTML = picContent
+    // // insertAfter(slogan, pic);
+    // //  insertAfter(infoBoxes, slogan);
+    // // insertAfter(sloganNInfo, pic);
+    // //insertAfter(pic, sloganNInfo);
+    // // sloganNInfo.innerHTML = picContent;
+    // // pic.innerHTML = sloganNInfoContent;
+    pic.innerHTML = sloganNInfoContent;
+    sloganNInfo.innerHTML = picContent;
+}
 
 const form = new Form();
 
-async function handle2StepTwoButtonClick(): Promise<string>  {
+async function handle2StepTwoButtonClick(): Promise<string> {
     return new Promise((resolve, reject) => {
         const firstButton = document.getElementById('toStepTwoButton');
         firstButton.addEventListener('click', async () => {
@@ -70,13 +94,13 @@ async function handle2StepTwoButtonClick(): Promise<string>  {
                 reject('Error!');
             }
         });
-      });
+    });
 }
 
-async function handle2StepThreeButtonClick(): Promise<string>  {
+async function handle2StepThreeButtonClick(): Promise<string> {
     return new Promise((resolve, reject) => {
-    const secondButton = document.getElementById('toStepThreeButton');
-    secondButton.addEventListener('click', async () => {
+        const secondButton = document.getElementById('toStepThreeButton');
+        secondButton.addEventListener('click', async () => {
             try {
                 const formExtractor = new FormExtractor("#demoForm");
                 if (formExtractor.checkForMissingElement()) {
@@ -95,7 +119,7 @@ async function handle2StepThreeButtonClick(): Promise<string>  {
                 reject('Error!');
             }
         });
-      });
+    });
 }
 
 
@@ -103,8 +127,8 @@ handle2StepTwoButtonClick().then(resultOne => {
     console.log(resultOne);
     handle2StepThreeButtonClick().then(resultTwo => {
         console.log(resultTwo);
-      }); 
-  });
+    });
+});
 
 // firstPromise.then(result => {
 //     console.log(result);  // Output: 'First success!'

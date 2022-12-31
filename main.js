@@ -44,6 +44,22 @@ class FormExtractor {
         return true;
     }
 }
+function insertAfter(newNode, referenceNode) {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+}
+const slogan = document.getElementById('slogan');
+const sloganNInfo = document.getElementById('sloganNInfo');
+const pic = document.getElementById('pic');
+const p = pic.parentNode;
+const picCopy = document.getElementById('pic');
+const infoBoxes = document.getElementById('infoBoxes');
+const picContent = pic.innerHTML;
+const sloganContent = slogan.innerHTML;
+const sloganNInfoContent = sloganNInfo.innerHTML;
+if (window.innerWidth < 450) {
+    pic.innerHTML = sloganNInfoContent;
+    sloganNInfo.innerHTML = picContent;
+}
 const form = new Form();
 function handle2StepTwoButtonClick() {
     return __awaiter(this, void 0, void 0, function* () {
