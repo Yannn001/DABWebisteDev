@@ -1,0 +1,284 @@
+
+:root {
+  --primary-red: #E0190D;
+  --primary-pink: #EBCCE3;
+  --primary-purple: #9432D1;
+  --primary-darkBlue: #1B06EB;
+  --primary-blue: #4F89E0;
+}
+
+html * {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Logo container in the second nav bar */
+.logoContainer {
+  position: absolute;
+  left: 0;
+  margin-left: 50px;
+}
+
+.logoContainerLrg {
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.logoContainerSml {
+  font-size: 0.8rem;
+  font-style: italic;
+  font-weight: 500;
+  /* display: block */
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.line {
+  border-top: 1px solid #BDBDBD;
+  background-color: #00060f;
+  height: 15px;
+  width: 100vw;
+  padding-left: 0;
+  padding-right: 0;
+  /* just make it so that its long enough to cover the whole screen */
+}
+
+.bigSlogan {
+  font-size: 3.6rem;
+  font-weight: 900;
+  /* font-style: italic; */
+  padding-bottom: 0%;
+
+}
+
+.smallSlogan {
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+.demoBtn {
+  /* margin-top: 600px;
+  margin-left: 50px;
+  position: absolute; */
+  background-color: #3b6afd;
+  color: white;
+  padding: 10px;
+  border-radius: 25px;
+  text-align: center;
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+
+.demoBtn:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.2);
+  font-weight: bold;
+}
+
+.infoContainer {
+  font-size: 0.8rem;
+  font-weight: 900;
+  font-family: 'Space Grotesk';
+}
+
+
+.infoOneContainer {
+  padding-top: 10px;
+}
+
+.infoTwoContainer {
+  padding-top: 10px;
+}
+
+.infoThreeContainer {
+  padding-top: 10px;
+}
+
+.infoFourContainer {
+  padding-top: 10px;
+}
+
+.barContainer {
+  position: absolute;
+  border-radius: 25px;
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 12px;
+  /* top:1px; */
+  margin-bottom: 0px;
+  width: 5px;
+  height: 80px;
+  background-color: #3b6afd;
+}
+
+.testimonialStyleContainer {
+  border-radius: 25% 25% 0% 100% / 0% 0% 25% 100%;
+  height: 200px;
+  position: relative;
+  /* background-color: var(--primary-red); */
+  background-color: white;
+}
+
+.testimonialContainer{
+    background-color: var(--primary-blue);
+    height: 820px;
+    width: 100vw;
+}
+
+.demoContainer{
+    height: 650px;
+}
+
+.smlLogoContainer {
+  position: absolute;
+  background-color: #dcdfe3;
+  left: 50px;
+  color: Black;
+  padding: 10px 50px 10px;
+  border-radius: 0px 0px 25px 25px;
+  height: 50px;
+  font-family: 'Space_Grotesk', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.stageContainer {
+  background-color: #3b3f47;
+  color: #dcdfe3;
+  padding-top: 10px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  width: 100px;
+  /* border-radius: 25px 25px 25px 25px; */
+  height: 50px;
+  font-family: 'Space_Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.navBtn {
+  border: 1px solid black;
+  font-weight: bold;
+  background-color: var(--primary-blue);
+}
+
+.navBtn:hover {
+  background-color: black;
+  color: var(--primary-blue);
+  font-weight: bold;
+}
+
+.adjustImg {
+  width: 450px;
+  height: 100px;
+  margin-top: 180px;
+}
+
+.adjustSlogan {
+  margin-left: 180px;
+  margin-top: 70px;
+}
+
+.smlInfoLogo {
+  width: 40px;
+  height: 40px;
+}
+
+.logos {
+  margin-top: 50px;
+  margin-left: 150px;
+  margin-bottom: 50px;
+}
+
+.homeBtn {
+  background-color: black;
+  color: white;
+  margin-top: 35px;
+  font-weight: bold;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .logoContainerLrg {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  .logoContainerSml {
+    font-size: 0.5rem;
+    /* font-weight: bold; */
+    /* display: block */
+    font-style: italic;
+  }
+
+  .navBtn {
+    border: 1px solid black;
+    font-weight: bold;
+    margin-top: 20px;
+    width: 340px;
+  }
+
+  .adjustImg {
+    width: 200px;
+    height: 45px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .adjustSlogan {
+    margin-left: 0px;
+    margin-top: 25px;
+    text-align: center;
+  }
+
+  .bigSlogan {
+    font-size: 2.2rem;
+    font-weight: bold;
+    /* font-style: italic; */
+  }
+
+  .smallSlogan {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    font-style: italic;
+  }
+
+  .adjustPic {
+    margin-top: 15px;
+    margin-left: 63px;
+    text-align: center;
+  }
+
+  .adjustSloganNInfo {
+    margin-right: 0px;
+  }
+
+  .adjustInfo {
+    /* position:fixed; */
+    /* right:0; */
+    /* text-align: center; */
+    margin-right: 30px;
+    /* padding-right: 100px; */
+  }
+
+  .adjustHomeBtn {
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+  }
+
+  .logos {
+    margin-top: 50px;
+    margin-left: 0px;
+    margin-right: 20px;
+    padding-bottom: 20px;
+  }
+}
