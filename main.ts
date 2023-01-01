@@ -2,7 +2,7 @@ class Form {
     formTwo: string;
     formThree: string;
     constructor() {
-        this.formTwo = "            <div id=\"missonType\" class=\"input-group col-md-6\">\n              <div class=\"input-group-prepend\">\n                <label class=\"input-group-text\" for=\"inputGroupSelect01\">Mission Type</label>\n              </div>\n              <select class=\"custom-select\" id=\"inputGroupSelect01\">\n                <option selected>Please pick one of the following mission type</option>\n                <option value=\"1\">One</option>\n                <option value=\"2\">Two</option>\n                <option value=\"3\">Three</option>\n              </select>\n            </div>\n            <div class=\"col-md-12\">\n              <input type=\"text\" class=\"form-control\" id=\"heatMapMetric\" placeholder=\"Metric of the Heat Map\"\n                required=\"\" autocomplete=\"off\" name=\"heatMapMetric\">\n              <div class=\"valid-feedback\">\n              </div>\n            </div>\n\n            <div class=\"col-md-12\">\n              <input type=\"text\" class=\"form-control\" id=\"missionDuration\" placeholder=\"Duration for this mission\"\n                required=\"\" autocomplete=\"off\" name=\"missionDuration\">\n              <div class=\"valid-feedback\">\n              </div>\n            </div>\n            \n            <div class=\"col-12\">\n              <button id=\"toStepThreeButton\" type=\"button\" class=\"btn btn-primary\" style=\"      \n              padding: 10px 20px 10px;\n              border-radius: 25px;\n              background-color: #3b6afd;\">\n                Next\n              </button>\n            </div>";
+        this.formTwo = "                <div id=\"missonType\" class=\"input-group col-md-6\">\n                <div class=\"input-group-prepend\">\n                  <label class=\"input-group-text\" for=\"inputGroupSelect01\">Mission Type</label>\n                </div>\n                <select class=\"custom-select\" id=\"inputGroupSelect01\">\n                  <option selected>Please pick one of the following mission type</option>\n                  <option value=\"1\">One</option>\n                  <option value=\"2\">Two</option>\n                  <option value=\"3\">Three</option>\n                </select>\n              </div>\n              <div class=\"col-md-12\">\n                <input type=\"text\" class=\"form-control\" id=\"heatMapMetric\" placeholder=\"Metric of the Heat Map\"\n                  required=\"\" autocomplete=\"off\" name=\"heatMapMetric\">\n                <div class=\"valid-feedback\">\n                </div>\n              </div>\n  \n              <div class=\"col-md-12\">\n                <input type=\"text\" class=\"form-control\" id=\"missionDuration\" placeholder=\"Duration for this mission\"\n                  required=\"\" autocomplete=\"off\" name=\"missionDuration\">\n                <div class=\"valid-feedback\">\n                </div>\n              </div>\n              \n              <div class=\"col-12\">\n                 <button id=\"toStepThreeButton\" type=\"button\" class=\"btn navBtn\">\n                    Next step\n                  </button>\n              </div>";
     }
     getFormTwo(): string {
         return this.formTwo;
@@ -45,27 +45,11 @@ class FormExtractor {
     }
 
 }
-const slogan = document.getElementById('slogan');
 const sloganNInfo = document.getElementById('sloganNInfo');
 const pic = document.getElementById('pic');
-const p = pic.parentNode;
-const picCopy = document.getElementById('pic');
-const infoBoxes = document.getElementById('infoBoxes');
 const picContent = pic.innerHTML;
-const sloganContent = slogan.innerHTML;
 const sloganNInfoContent = sloganNInfo.innerHTML;
 if (window.innerWidth < 450) {
-    // p.removeChild(pic);
-    //  p.insertBefore(picCopy, sloganNInfo);
-    // //p.insertBefore(sloganNInfo, picCopy);
-    // // pic.innerHTML = sloganContent;
-    // // slogan.innerHTML = picContent
-    // // insertAfter(slogan, pic);
-    // //  insertAfter(infoBoxes, slogan);
-    // // insertAfter(sloganNInfo, pic);
-    // //insertAfter(pic, sloganNInfo);
-    // // sloganNInfo.innerHTML = picContent;
-    // // pic.innerHTML = sloganNInfoContent;
     pic.innerHTML = sloganNInfoContent;
     sloganNInfo.innerHTML = picContent;
 }
@@ -109,7 +93,7 @@ async function handle2StepThreeButtonClick(): Promise<string> {
                     document.getElementById("stageThree").style.opacity = "1";
                     const result = form.getFormTwo();
                     const formDiv = document.getElementById('demoForm');
-                    formDiv.innerHTML = "            <div class=\"demoBtn\" style=\"      \n    margin-top: 50px;\n    margin-left: 50px;\n    width: 80%;\n    \">\n              Get report\n            </div>";
+                    formDiv.innerHTML = "                <button type=\"button\" class=\"btn mx-auto homeBtn text-center\" style=\"width:50%; font-size: 1rem;\">\n                  Generate report\n                </button>";
                     resolve('Passed step two!');
                 } else {
                     console.log("fail to pass step two");
