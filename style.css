@@ -1,3 +1,7 @@
+.remove-all-margin-padding {
+  margin: 0;
+  padding: 0;
+}
 
 :root {
   --primary-red: #E0190D;
@@ -13,7 +17,7 @@ html * {
 
 /* Logo container in the second nav bar */
 .logoContainer {
-  position: absolute;
+  /* position: absolute; */
   left: 0;
   margin-left: 50px;
 }
@@ -39,7 +43,6 @@ html * {
   border-top: 1px solid #BDBDBD;
   background-color: #00060f;
   height: 15px;
-  width: 100vw;
   padding-left: 0;
   padding-right: 0;
   /* just make it so that its long enough to cover the whole screen */
@@ -50,12 +53,15 @@ html * {
   font-weight: 900;
   /* font-style: italic; */
   padding-bottom: 0%;
+  margin-left: 168px;
+  padding-right: 0%;
 
 }
 
 .smallSlogan {
   font-size: 1.3rem;
   font-style: italic;
+  margin-left: 168px;
 }
 
 .demoBtn {
@@ -105,50 +111,36 @@ html * {
   padding-top: 10px;
 }
 
-.barContainer {
-  position: absolute;
-  border-radius: 25px;
-  display: inline-block;
-  margin-top: 10px;
-  margin-left: 12px;
-  /* top:1px; */
-  margin-bottom: 0px;
-  width: 5px;
-  height: 80px;
-  background-color: #3b6afd;
-}
-
 .testimonialStyleContainer {
-  border-radius: 25% 25% 0% 100% / 0% 0% 25% 100%;
+  border-radius: 0% 100% 0% 100% / 30% 0% 100% 70%;
   height: 200px;
   position: relative;
   /* background-color: var(--primary-red); */
   background-color: white;
 }
 
-.testimonialContainer{
-    background-color: var(--primary-blue);
-    height: 640px;
-    width: 100vw;
+.testimonialTwoStyleContainer {
+  border-radius: 100% 0% 100% 0% / 0% 30% 70% 100%;
+  height: 200px;
+  position: relative;
+  /* background-color: var(--primary-red); */
+  background-color: white;
 }
 
-.demoContainer{
-    height: 650px;
-    font-family: 'Space_Grotesk', sans-serif;
+.testimonialContainer {
+  background-color: var(--primary-blue);
+  height: 640px;
+}
+.testimonialTwoContainer{
+  background-color: var(--primary-pink);
+  height: 640px;
 }
 
-.smlLogoContainer {
-  position: absolute;
-  background-color: #dcdfe3;
-  left: 50px;
-  color: Black;
-  padding: 10px 50px 10px;
-  border-radius: 0px 0px 25px 25px;
-  height: 50px;
+.demoContainer {
+  height: 650px;
   font-family: 'Space_Grotesk', sans-serif;
-  font-size: 1.3rem;
-  font-weight: bold;
 }
+
 
 .stageContainer {
   background-color: var(--primary-blue);
@@ -157,7 +149,7 @@ html * {
   padding-right: 0px;
   padding-bottom: 0px;
   padding-left: 0px;
-  width: 100%;
+
   /* border-radius: 25px 25px 25px 25px; */
   height: 50px;
   font-family: 'Space_Grotesk', sans-serif;
@@ -184,7 +176,7 @@ html * {
 }
 
 .adjustSlogan {
-  margin-left: 180px;
+  /* margin-left: 180px; */
   margin-top: 70px;
 }
 
@@ -202,19 +194,67 @@ html * {
 .homeBtn {
   background-color: black;
   color: white;
-  margin-top: 35px;
+  margin-top: 50px;
+  margin-left: 168px;
   font-weight: bold;
 }
 
-.testimonialSentenceLg{
-    margin-top: 110px;
-    margin-left:200px;
-    font-size: 2.5rem;
+.testimonialSentenceLg {
+  margin-top: 110px;
+  margin-left: 200px;
+  font-size: 2.5rem;
 }
 
-.testimonialSentenceSm{
-    margin-left:50px;
-    margin-top: 90px;
+.testimonialSentenceSm {
+  margin-left: 50px;
+  margin-top: 90px;
+}
+
+.productContainer {
+  height: 980px;
+}
+
+.productsContainer {
+  padding-top: 50px;
+}
+
+.productInfo {
+  padding-top: 60px;
+  /* padding-left: 50px;
+  padding-right: 50px; */
+}
+
+.productInfoTitle {
+  font-size: 55px;
+}
+
+.productInfoDescription {
+  padding-top: 15px;
+  width: 700px;
+  /* font-size: 18px; */
+}
+
+.productImgContainer {}
+
+.productImg {
+  height: 320px;
+  width: 230px;
+  border: 2px solid black;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.productTitleContainer {
+  margin-top: 20px;
+  height: 70px;
+  font-size: 22px;
+  font-weight:800;
+}
+
+.productContentContainer{
+  margin-top: 10px;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -290,7 +330,7 @@ html * {
   .logos {
     margin-top: 50px;
     margin-left: 0px;
-    margin-right: 20px;
+    margin-right: 0px;
     padding-bottom: 20px;
   }
 }
