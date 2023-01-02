@@ -15,6 +15,22 @@ html * {
   font-family: 'Space Grotesk', sans-serif;
 }
 
+/* .productBtn {
+  background: black;
+  color: white;
+  display: inline-block;
+  width: fit-content;
+  padding: 0.8rem 1.6rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 400ms ease;
+}
+
+.productBtn:hover {
+  background: var(--primary-red);
+  color: var(--primary-blue);
+} */
+
 /* Logo container in the second nav bar */
 .logoContainer {
   /* position: absolute; */
@@ -199,6 +215,14 @@ html * {
   font-weight: bold;
 }
 
+.productBtn{
+  background-color: black;
+  color: white;
+  margin-top: 20px;
+  width:70%;
+  font-weight: bold;
+}
+
 .testimonialSentenceLg {
   margin-top: 110px;
   margin-left: 200px;
@@ -211,7 +235,7 @@ html * {
 }
 
 .productContainer {
-  height: 980px;
+  height: 1080px;
 }
 
 .productsContainer {
@@ -219,7 +243,7 @@ html * {
 }
 
 .productInfo {
-  padding-top: 60px;
+  padding-top: 100px;
   /* padding-left: 50px;
   padding-right: 50px; */
 }
@@ -234,16 +258,24 @@ html * {
   /* font-size: 18px; */
 }
 
-.productImgContainer {}
+.productImgContainer {
+}
 
 .productImg {
   height: 320px;
   width: 230px;
   border: 2px solid black;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 1.6rem grey;
+  transition: all 400ms ease;
+}
+
+.productImg:hover {
+  box-shadow: none;
 }
 
 .productTitleContainer {
