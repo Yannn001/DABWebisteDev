@@ -51,7 +51,7 @@
               <a class="nav-link me-2" href="#">Product</a>
             </li>
             <li>
-              <a class="nav-link me-2" href="#demo">Demo</a>
+              <a class="nav-link me-2 " href="#demo" data-bs-toggle="modal" data-bs-target="#exampleModal">Demo</a>
             </li>
             <li>
               <a class="nav-link me-2" href="#">About</a>
@@ -311,137 +311,27 @@
     </div>
   </div>
 
-  <!-- TESTIMONIALTWO PAGE END HERE & DEMO STARTS -->
-  <div id="demo" class="container-fluid demoContainer">
-    <div class="container-fluid">
-      <div class="row">
-        <!-- <div class="col-4"> </div> -->
-        <div class="col-12">
-          <div class="container-fluid">
-            <div class="row text-center mt-4">
-              <div id="stageOne" class="col-4" style="opacity: 1;">
-                <div class="stageContainer text-center mx-auto">Stage one</div>
-              </div>
-              <div id="stageTwo" class="col-4" style="opacity: 0.5;">
-                <div class="stageContainer text-center mx-auto">Stage two</div>
-              </div>
-              <div id="stageThree" class="col-4" style="opacity: 0.5;">
-                <div class="stageContainer text-center mx-auto">Stage three</div>
-              </div>
-            </div>
-            <div class="row text-center">
-              <div class="col-12 text-center" style="
-              font-size: 2.3rem;
-              padding-top: 20px;
-              font-weight: 900;">
-                Request New Scouting Mission
-              </div>
-            </div>
-            <div class="container-fluid">
-              <form id="demoForm" class="row g-3 needs-validation was-validated"
-                style="padding-top: 25px; padding-right: 40px;padding-left: 130px;">
-                <div class="col-md-6">
-                  <input type="text" class="form-control" id="inputAerialScoutingId"
-                    placeholder="Aerial Scouting Unit ID" required="" autocomplete="off" name="aerialScoutingId">
-                  <div class="valid-feedback">
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <input type="text" class="form-control" id="inputResourceKeys" placeholder="Compute Resource Keys"
-                    required="" autocomplete="off" name="resourceKeys">
-                  <div class="valid-feedback">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <input type="text" class="form-control" id="inputGPSCoordinates"
-                    placeholder="Flight Area GPS Coordinates" required="" autocomplete="off" name="gpsCoordinates">
-                  <div class="valid-feedback">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <input type="text" class="form-control" id="inputMaximumAltitude" placeholder="Maximum Altitude"
-                    required="" autocomplete="off" name="maximumAltitude">
-                  <div class="valid-feedback">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <input type="text" class="form-control" id="inputObserverID" placeholder="Flight Observer ID"
-                    required="" autocomplete="off" name="observerID">
-                  <div class="valid-feedback">
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <input type="text" class="form-control" id="inputOrganizationID" placeholder="Organization ID"
-                    required="" autocomplete="off" name="organizationID">
-                  <div class="valid-feedback">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <input type="text" class="form-control" id="inputAdditionalInfo"
-                    placeholder="Additional Information(opt)" autocomplete="off" name="additionalInfo">
-                  <div class="valid-feedback">
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="checkFAACheck" required="" autocomplete="off"
-                      name="faaCheck" unchecked>
-                    <label class="form-check-label" for="FAACheck">
-                      I certify this mission follows all FAA regulations.
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="checkAcknowledgeCheck" required=""
-                      autocomplete="off" name="acknowledgeCheck" unchecked>
-                    <label class="form-check-label" for="acknowledgeCheck">
-                      I certify that I have permission of the land owner and relevant parties to conduct this mission.
-                    </label>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <button id="toStepTwoButton" type="button" class="btn navBtn">
-                    Next step
-                  </button>
-                </div>
-
-                <!-- FORM TWO -->
-                <!-- <div id="missonType" class="input-group col-md-6">
-                <div class="input-group-prepend">
-                  <label class="input-group-text" for="inputGroupSelect01">Mission Type</label>
-                </div>
-                <select class="custom-select" id="inputGroupSelect01">
-                  <option selected>Please pick one of the following mission type</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-              </div>
-              <div class="col-md-12">
-                <input type="text" class="form-control" id="heatMapMetric" placeholder="Metric of the Heat Map"
-                  required="" autocomplete="off" name="heatMapMetric">
-                <div class="valid-feedback">
-                </div>
-              </div>
   
-              <div class="col-md-12">
-                <input type="text" class="form-control" id="missionDuration" placeholder="Duration for this mission"
-                  required="" autocomplete="off" name="missionDuration">
-                <div class="valid-feedback">
-                </div>
-              </div>
-              
-              <div class="col-12">
-                 <button id="toStepThreeButton" type="button" class="btn navBtn">
-                    Next step
-                  </button>
-              </div> -->
-            </div>
+  <!-- TESTIMONIALTWO PAGE END HERE & DEMO STARTS -->
+  <!-- when ready, copy paste the demo.html and uncomment height for demoContainer-->
+  <div id="demo" class="container-fluid demoContainer">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            The demo section will be coming soon...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
     </div>
+    <!-- Modal -->
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

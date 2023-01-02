@@ -153,7 +153,7 @@ html * {
 }
 
 .demoContainer {
-  height: 650px;
+  /* height: 650px;  Open this section when demo is ready */
   font-family: 'Space_Grotesk', sans-serif;
 }
 
