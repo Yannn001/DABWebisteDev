@@ -147,7 +147,8 @@ html * {
   background-color: var(--primary-blue);
   height: 640px;
 }
-.testimonialTwoContainer{
+
+.testimonialTwoContainer {
   background-color: var(--primary-pink);
   height: 640px;
 }
@@ -215,11 +216,11 @@ html * {
   font-weight: bold;
 }
 
-.productBtn{
+.productBtn {
   background-color: black;
   color: white;
   margin-top: 20px;
-  width:70%;
+  width: 70%;
   font-weight: bold;
 }
 
@@ -258,8 +259,7 @@ html * {
   /* font-size: 18px; */
 }
 
-.productImgContainer {
-}
+.productImgContainer {}
 
 .productImg {
   height: 320px;
@@ -282,23 +282,24 @@ html * {
   margin-top: 20px;
   height: 70px;
   font-size: 22px;
-  font-weight:800;
+  font-weight: 800;
 }
 
-.productContentContainer{
+.productContentContainer {
   margin-top: 10px;
 }
 
-.personInfoContainer{
+.personInfoContainer {
   height: 400px;
   width: 300px;
   margin-top: 50px;
 }
 
-.aboutContainer{
+.aboutContainer {
   height: 840px;
 }
-.personInfoStyleContainer{
+
+.personInfoStyleContainer {
   display: flex;
   align-items: center;
   height: 10%;
@@ -309,7 +310,8 @@ html * {
   /* border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px; */
 }
-.personInfoTextContainer{
+
+.personInfoTextContainer {
   height: 90%;
   background-color: white;
   border-top: none;
@@ -320,7 +322,7 @@ html * {
   border-bottom-right-radius: 10px;
 }
 
-.aboutTextContainer{
+.aboutTextContainer {
   height: 70%;
   /* background-color: yellowgreen; */
   padding-top: 30px;
@@ -329,26 +331,69 @@ html * {
   font-size: 16px;
 }
 
-.aboutSigContainer{
+.aboutSigContainer {
   /* background-color: red; */
   font-weight: 900;
   margin-left: 50%;
   margin-top: 20px;
 }
-.dot{
+
+.dot {
   width: 8px;
   height: 8px;
   background-color: black;
-  margin-left:4%;
+  margin-left: 4%;
   border-radius: 50%;
   display: inline-block;
 }
-.AboutInfo{
+
+.AboutInfo {
   padding-top: 100px;
 }
-.AboutInfoTitle{
+
+.AboutInfoTitle {
   font-size: 55px;
 }
+
+#contact {
+  background: var(--primary-pink);
+  color: black;
+  margin: 0;
+  height: 400px;
+}
+
+.contact__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  font-size: 0.9rem;
+}
+
+.contact__container h2 {
+  color: black;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.contact__container p {
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.contact__container iframe {
+  margin-top: 50px;
+  border: none;
+  max-width: 100%;
+  max-height: 100vh;
+  height: 300px;
+  width: 600px;
+}
+
+.contact__left {
+  margin-top: 100px;
+}
+
 @media (min-width: 320px) and (max-width: 767px) {
   .logoContainerLrg {
     font-size: 1.1rem;
