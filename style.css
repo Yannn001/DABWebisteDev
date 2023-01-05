@@ -236,7 +236,7 @@ html * {
 }
 
 .productContainer {
-  height: 1080px;
+  height: 2080px;
 }
 
 .productsContainer {
@@ -290,6 +290,8 @@ html * {
 }
 
 .personInfoContainer {
+
+  position: relative;
   height: 400px;
   width: 300px;
   margin-top: 50px;
@@ -328,14 +330,14 @@ html * {
   padding-top: 30px;
   padding-left: 40px;
   padding-right: 40px;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .aboutSigContainer {
   /* background-color: red; */
   font-weight: 900;
   margin-left: 50%;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .dot {
@@ -392,6 +394,13 @@ html * {
 
 .contact__left {
   margin-top: 100px;
+}
+
+.PersonImg{
+  height: 200px;
+  position: absolute;
+  top: 250px;
+  right: 240px;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
